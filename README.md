@@ -186,5 +186,58 @@ Slot分发内容
                 子组件的指令绑定在子组件的模板之中（如此才能调用）；      
         
         
-    
-    
+    
+   slot：经典例子
+   
+
+                            <div id="app">
+                                <person>
+                                    <span slot="name">{{componetData.name}}</span>
+                                    <span slot="age">{{componetData.age}}</span>
+                                    <span slot="job">{{componetData.job}}</span>
+                                </person>
+
+                            </div>
+                            <template id="per">
+                                <div>
+                                    <p>姓名:<slot name="name"></slot></p>
+                                    <p>年龄:<slot name="age"></slot></p>
+                                    <p>职业:<slot name="job"></slot></p>
+                                </div>
+                            </template>
+
+
+                            <script>
+                                var person={
+                                  template:"#per"
+                                };
+                               new Vue({
+                                 el:'#app',
+                                  data:{
+                                     componetData:{
+                                         name:"张三",
+                                         age:19,
+                                         job:"stueder"
+                                     }
+                                  },
+                                 components:{
+                                   'person':person
+                                 }
+                               })
+                            </script>
+ 
+       渲染后 dom：
+             <div id="app">
+              <div>
+               <p>姓名:<span>张三</span></p> 
+               <p>年龄:<span>19</span></p> 
+               <p>职业:<span>stueder</span></p>
+              </div>
+             </div>
+   
+   
+   
+   
+   
+   
+   
