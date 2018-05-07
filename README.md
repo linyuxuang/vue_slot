@@ -226,15 +226,15 @@ Slot分发内容
                                })
                             </script>
  
-       渲染后 dom：
-             <div id="app">
-              <div>
-               <p>姓名:<span>张三</span></p> 
-               <p>年龄:<span>19</span></p> 
-               <p>职业:<span>stueder</span></p>
-              </div>
-             </div>
-   
+                           渲染后 dom：
+                                 <div id="app">
+                                  <div>
+                                   <p>姓名:<span>张三</span></p> 
+                                   <p>年龄:<span>19</span></p> 
+                                   <p>职业:<span>stueder</span></p>
+                                  </div>
+                                 </div>
+
    
    
    
